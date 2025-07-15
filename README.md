@@ -1,10 +1,22 @@
-# 青空文庫の小説の物語の時系列に沿った感情をグラフにする
+# 青空文庫の小説をテキスト分析し、物語の進行に沿った感情の推移をグラフで可視化。
 
-Huggingfaceのデータセット`globis-university/aozorabunko-clean`を活用して、コードを簡潔にしている。
+Hugging FaceのデータセットとBERTモデルを利用し、文章を一行ずつ分析。物語の感情的な浮き沈みや「起承転結」のような構成を視覚的に捉えることができます。
 
-各行を改行区切りで抜き出して、`koheiduck/bert-japanese-finetuned-sentimen`モデルで感情を["POSITIVE", "NEGATIVE", "NEUTRAL"]のいずれかに推論、統合スコアを求め行ごとにスコアを記録する。そのあとにMatplotlibにて描画。
+Hugging Faceのデータセット globis-university/aozorabunko-clean を利用し、青空文庫の小説における物語の進行に沿った感情の推移をグラフで可視化します。
 
-物語の感情の推移をグラフとして見られる。概ね王道とされているような展開のグラフが得られる。（起承転結）
+文章を一行ずつ koheiduck/bert-japanese-finetuned-sentimen モデルで分析し、["POSITIVE", "NEGATIVE", "NEUTRAL"] のいずれかの感情ラベルを付与。各行の感情スコアから全体の推移を算出し、Matplotlibでグラフを描画します。
+
+これにより、物語の感情的な流れ、いわゆる「起承転結」のような構造を視覚的に捉えることができます。
+
+## 実行方法
+
+./Run.sh を実行してください。
+
+詳細はスクリプト内を確認すること。
+
+GPUの利用を推奨。
+
+NVIDIA RTX 2080Tiを使用した場合でも、完了まで1時間以上かかります。
 
 
 <img width="400" height="400" alt="寡婦とその子" src="https://github.com/user-attachments/assets/9310c1ee-5fb5-47fb-bc03-547c8738900f" />
