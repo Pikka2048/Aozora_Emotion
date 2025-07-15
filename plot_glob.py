@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
 import japanize_matplotlib
+import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.signal import savgol_filter
 import glob
