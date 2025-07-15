@@ -14,6 +14,8 @@ Hugging Faceのデータセット globis-university/aozorabunko-clean を利用�
 
 詳細はスクリプト内を確認すること。
 
+## 注意点
+
 GPUの利用を推奨。
 
 NVIDIA RTX 2080Tiを使用した場合でも、完了まで1時間以上かかります。
